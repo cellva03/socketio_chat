@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include('./partials/header.ejs') %>
+  <body>
+    <center>
+      <h2 style="margin-top: 50px; color: aliceblue">
+        Choose Your User Type 😊...
+      </h2>
+    </center>
+    <div class="card-container">
+      <a href="/user/auth/login" style="text-decoration: none">
+        <div class="card" style="width: 14rem">
+          <img
+            src="https://cdn-icons.flaticon.com/png/512/1165/premium/1165674.png?token=exp=1656136465~hmac=a12e89d96485e161f33a4faa01fa9acf"
+            class="card-img-top"
+            alt="..."
+          />
+          <div class="card-body">
+            <p class="card-text text-center">USERS</p>
+          </div>
+        </div>
+      </a>
+      <a href="admin/auth/login" style="text-decoration: none">
+        <div class="card" style="width: 14rem">
+          <img
+            src="https://cdn-icons-png.flaticon.com/512/2416/2416668.png"
+            class="card-img-top"
+            alt="..."
+          />
+          <div class="card-body">
+            <p class="card-text text-center">ADMIN</p>
+          </div>
+        </div>
+      </a>
+    </div>
+  </body>
+</html>

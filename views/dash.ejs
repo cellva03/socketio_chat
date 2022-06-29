@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Chat App</title>
+    <link rel="icon" href="/img/favicon.png" />
+    <link rel="stylesheet" href="/css/style.css" />
+  </head>
+  <body>
+    <div class="centered-form">
+      <div class="centered-form__box">
+        <h1>Join</h1>
+        <form action="/user/chat">
+          <label>Display name</label>
+          <input
+            value="<%=user.username%>"
+            type="text"
+            name="username"
+            required
+          />
+          <label>Room</label>
+          <input type="text" name="room" placeholder="Room" required />
+          <button>Join</button><br />
+        </form>
+        <a href="/user/admin/chat">
+          <button style="margin-top: 10px">Admin chat</button>
+        </a>
+        <a href="/user/auth/logout">
+          <button style="margin-top: 10px">Logout</button>
+        </a>
+      </div>
+    </div>
+  </body>
+</html>

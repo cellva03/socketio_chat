@@ -24,7 +24,7 @@ app.use(cookieParser());
 app.set('view engine', 'ejs');
 
 // database connection
-const dbURI = 'mongodb://0.0.0.0:27017/socketio';
+const dbURI = 'mongodb+srv://Selva:Selva03@socket.jzlhuuo.mongodb.net/?retryWrites=true&w=majority';
 mongoose.connect(dbURI, { useNewUrlParser: true, useUnifiedTopology: true, useCreateIndex:true })
   .then((result) => {
     console.log('DataBase is connected');
@@ -91,7 +91,7 @@ adminChat.on('connection', (socket) => {
 })
 // routes
 app.get('*', checkUser); 
-app.get('/', (req, res) => res.render('index'));
+app.get('/', (req, res) => res.redirect('/user/auth/login'));
 app.get('/user/chat',requireAuth,(req, res)=>{
   res.render('chat')
 })
@@ -106,4 +106,4 @@ app.use('/admin/auth',adminRoute.router);
 app.use('/admin/auth',requireAuth,adminRoute.authentiactedRouter)
 app.get('/admin/chat',requireAuth,(req, res)=>{
     res.render('admin/chat')
-  })
+})
